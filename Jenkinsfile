@@ -25,18 +25,4 @@ node {
         
         junit 'test-reports/results.xml'
     }
-
-    stage('Deliver') {
-        try {
-            def pyinstallerImage = docker.image('cdrx/pyinstaller-linux:python2')
-            pyinstallerImage.inside {
-                sh 'pyinstaller --onefile sources/add2vals.py'
-            }
-        } catch (Exception e) {
-            currentBuild.result = 'FAILURE'
-            error "Deliver failed: ${e.message}"
-        }
-
-        archiveArtifacts 'dist/add2vals'
-    }
 }
