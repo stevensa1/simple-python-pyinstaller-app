@@ -10,16 +10,16 @@ argnumbers = len(sys.argv) - 1
 
 if argnumbers == 2 :
     print("")
-    print("The result is " + str(calc.add2(str(sys.argv[1]), str(sys.argv[2]))))
+    print("Hasil dari penjumlahan " + str(calc.add2(str(sys.argv[1]), str(sys.argv[2]))))
     print("")
     sys.exit(0)
 
 if argnumbers != 2 :
     print("")
-    print("You entered " + str(argnumbers) + " value/s.")
+    print("Anda memasukkan nilai " + str(argnumbers) + ".")
     print("")
-    print("Usage: 'add2vals X Y' where X and Y are individual values.")
-    print("       If add2vals is not in your path, usage is './add2vals X Y'.")
-    print("       If unbundled, usage is 'python add2vals.py X Y'.")
+    print("Penggunaan: 'add2vals X Y' dimana X dan Y adalah nilai individual.")
+    print("       Jika add2vals tidak terdapat pada path, maka penggunaannya adalah './add2vals X Y'.")
+    print("       Jika tidak terbundle, maka penggunaannya adalah 'python add2vals.py X Y'.")
     print("")
     sys.exit(1)
